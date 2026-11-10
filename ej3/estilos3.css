@@ -1,0 +1,11 @@
+p#p1, p#p3, p#p4 {
+    color: blue;
+}
+
+p#p2 {
+    color: green;
+}
+
+p#p1, p#p4 {
+    font-weight: bold;
+}

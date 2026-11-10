@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - MiCarnicería</title>
+    
+    <!-- Tipografías de Google Fonts: Montserrat y Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Añade Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos4.css">
+</head>
+
+<body>
+
+    <!-- Cabecera y menú de navegación -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>MiCarnicería</h1>
+            </div>
+
+            <nav class="header-nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                
+                <a href="pollo.html" title="Pollo">
+                    <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Pollo
+                </a>
+
+                <a href="pavo.html" title="Pavo">
+                    <i class="fa-solid fa-feather" aria-hidden="true"></i> Pavo
+                </a>
+
+                <a href="cerdo.html" title="Cerdo">
+                    <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i> Cerdo
+                </a>
+
+                <a href="ternera.html" title="Ternera">
+                    <i class="fa-solid alt fa-cow" aria-hidden="true"></i> Ternera
+                </a>
+
+                <a href="cordero.html" title="Cordero">
+                    <i class="fa-solid fa-bone" aria-hidden="true"></i> Cordero
+                </a>
+
+                <a href="conejo.html" title="Conejo">
+                    <i class="fa-solid fa-carrot" aria-hidden="true"></i> Conejo
+                </a>
+
+                <a href="precocinados.html" title="Precocinados">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i> Precocinados
+                </a>
+
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="user-actions">
+                <!-- Usamos una clase aquí para practicar selectores de clase -->
+                <a href="carrito.html" class="btn-carrito">CARRITO</a>
+                <a href="login.html">Iniciar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Ruta de navegación y buscador -->
+        <section class="utility-bar">
+            <nav class="breadcrumbs" aria-label="Ruta de navegación">
+                <a href="index.html">Inicio</a> > <span>Pollo</span>
+            </nav>
+
+            <form action="pollo.html" method="get" role="search">
+                <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <!-- Sección de bienvenida con ID único para practicar Identificadores -->
+        <section id="seccion-bienvenida" class="intro-seccion">
+            <h2>Especialistas en carne fresca de pollo</h2>
+            <p>Descubre nuestra selección diaria de productos avícolas directos de la granja a tu mesa. Calidad garantizada para tus recetas más deliciosas.</p>
+        </section>
+
+        <!-- Galería de productos -->
+        <section class="catalog-container" aria-label="Catálogo de productos de pollo">
+            <div class="product-grid">
+
+                <!-- Producto destacado usando Clase e ID combinados o clases de oferta -->
+                <article class="product-card item-destacado" id="producto-estrella">
+                    <a href="producto1.html">
+                        <img src="imagenes/pollo1.jpg" alt="Pollo entero fresco">
+                    </a>
+                    <h3>Pollo entero</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto2.html">
+                        <img src="imagenes/pollo2.jpg" alt="Pechuga de pollo limpia">
+                    </a>
+                    <h3>Pechuga de pollo</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto3.html">
+                        <img src="imagenes/pollo3.jpg" alt="Alitas de pollo frescas">
+                    </a>
+                    <h3>Alitas de pollo</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto4.html">
+                        <img src="imagenes/pollo4.jpg" alt="Muslos de pollo frescos">
+                    </a>
+                    <h3>Muslos de pollo</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto5.html">
+                        <img src="imagenes/pollo5.jpg" alt="Jamoncitos de pollo">
+                    </a>
+                    <h3>Jamoncitos</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto6.html">
+                        <img src="imagenes/pollo6.jpg" alt="Solomillo de pollo jugoso">
+                    </a>
+                    <h3>Solomillo de pollo</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto7.html">
+                        <img src="imagenes/pollo7.jpg" alt="Contramuslos de pollo">
+                    </a>
+                    <h3>Contramuslos</h3>
+                </article>
+
+                <article class="product-card">
+                    <a href="producto8.html">
+                        <img src="imagenes/pollo8.jpg" alt="Carcasa de pollo para caldo">
+                    </a>
+                    <h3>Carcasa de pollo</h3>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>MiCarnicería - Calidad, tradición y confianza.</p>
+        <p>© 2026 MiCarnicería. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

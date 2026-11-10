@@ -1,0 +1,36 @@
+/* a) Enlaces por defecto y sin visitar (verde y sin subrayar) 
+   Usamos a:link y a de forma combinada para forzar el color verde inicial 
+   en cualquier enlace que no haya sido marcado como visitado. */
+a {
+    color: green;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* c) Cuando se haya visitado, aparecerán en negrita y de color negro */
+a:target, a:visited {
+    color: black;
+    font-weight: bold;
+}
+
+/* b) Al pasar el ratón sobre los enlaces, deben aparecer de color rojo y subrayados */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* d) Elementos de tipo listado siempre aparecerán en cursiva */
+li {
+    font-style: italic;
+}
+
+/* e) Estilos para títulos impares y pares mediante clases */
+.titulo-impar {
+    color: black;
+    text-decoration: underline;
+}
+
+.titulo-par {
+    color: gray;
+    text-decoration: none;
+}

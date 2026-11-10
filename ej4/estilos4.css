@@ -1,0 +1,281 @@
+/* ==========================================================================
+   1. VARIABLES Y ESTILOS BASE
+   ========================================================================== */
+:root {
+    --color-primary: #8B1E24;     /* Rojo oscuro */
+    --color-secondary: #355E3B;   /* Verde oscuro */
+    --color-accent: #D4A72C;      /* Dorado */
+    --color-bg: #FFF8EE;          /* Crema */
+    --color-text: #252525;        /* Gris oscuro */
+    --max-width: 1200px;
+}
+
+/* Selector universal (*) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Selector de etiqueta */
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   2. CABECERA Y NAVEGACIÓN (Selectores Descendientes y Pseudoclases)
+   ========================================================================== */
+header {
+    background-color: var(--color-primary);
+    color: #FFF8EE;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #FFF8EE;
+    white-space: nowrap;
+}
+
+/* Selector Descendiente: Aplica a los enlaces dentro de .header-nav */
+.header-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: #FFF8EE;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Pseudoclase a:hover y a:visited */
+.header-nav a:hover {
+    color: var(--color-accent);
+}
+
+.header-nav a:visited {
+    color: #fce29d; /* Color especial para enlaces visitados del menú */
+}
+
+.header-nav a i {
+    font-size: 1rem;
+    color: var(--color-accent);
+}
+
+/* Selector de Clase (.user-actions) */
+.user-actions {
+    display: flex;
+    gap: 0.8rem;
+    white-space: nowrap;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #FFF8EE;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+/* Selector de Clase específico combinando etiqueta y clase */
+a.btn-carrito {
+    background-color: var(--color-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   3. IDENTIFICADORES Y CLASES DE CONTENIDO (Tema 3 del temario)
+   ========================================================================== */
+
+/* Identificador (ID): Selector único #seccion-bienvenida */
+#seccion-bienvenida {
+    max-width: var(--max-width);
+    margin: 1.5rem auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fcf4e4;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 4px;
+}
+
+/* Identificador dependiente (Aplica sólo a párrafos dentro del ID) */
+#seccion-bienvenida p {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* Pseudoelemento ::first-letter aplicado al párrafo de bienvenida */
+#seccion-bienvenida p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   4. BARRA DE UTILIDADES (BREADCRUMBS Y BUSCADOR)
+   ========================================================================== */
+.utility-bar {
+    max-width: var(--max-width);
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+form[role="search"] {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+form[role="search"] input[type="search"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form[role="search"] button[type="submit"] {
+    background-color: var(--color-secondary);
+    color: #FFF8EE;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Pseudoclase :focus para accesibilidad en el input de búsqueda */
+form[role="search"] input[type="search"]:focus {
+    outline: 2px solid var(--color-accent);
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   5. CATÁLOGO Y PSEUDOCLASES DE POSICIÓN (:first-child)
+   ========================================================================== */
+.catalog-container {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e2d4be;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    position: relative; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Pseudoclase de posición: :first-child (La primera tarjeta del catálogo) */
+.product-grid .product-card:first-child {
+    background-color: #fffcf5;
+    border: 2px dashed var(--color-accent);
+}
+
+/* Pseudoelemento ::before para añadir una etiqueta visual de "Destacado" al primer elemento */
+.product-grid .product-card:first-child::before {
+    content: "¡Estrella!";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(139, 30, 36, 0.15);
+    border-color: var(--color-accent);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    margin: 0.8rem 0 0 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    transition: color 0.2s ease;
+}
+
+.product-card:hover h3 {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA Y PSEUDOELEMENTOS DE TEXTO (::after)
+   ========================================================================== */
+footer {
+    background-color: var(--color-primary);
+    color: #FFF8EE;
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Pseudoelemento ::after para añadir un asterisco o texto automático al final del footer */
+footer p:last-child::after {
+    content: " *";
+}

@@ -1,0 +1,19 @@
+
+/* Uso de la CLASE: Se aplica a todas las cajas de oferta (fondo crema) */
+.caja-oferta {
+    padding: 15px;
+    background-color: #FFF8EE;
+    border: 1px solid #ccc;
+}
+
+/* Uso del IDENTIFICADOR: Solo se aplica al elemento único con id="destacado" */
+#destacado {
+    font-weight: bold;
+    color: #8B1E24;
+}
+
+/* COMBINACIÓN de clase e identificador: 
+   Aplica solo al elemento que posea AMBAS características */
+div.caja-oferta#destacado {
+    border: 2px solid #D4A72C; /* Borde dorado exclusivo para el destacado */
+}
